@@ -11,7 +11,7 @@ a5paper%                       Taille de page.
 ,headings=small%
 ,parskip=false%
 ,openany%
-]{scrbook}
+]{scrartcl}
 \renewcommand*\partheademptypage{\thispagestyle{empty}}
 \newcounter{facteur}\setcounter{facteur}{17}%%%%%%%%%%%%%% Paramètre pour la taille globale des partitions. par défaut~: 17
 %\usepackage{geometry}
@@ -32,45 +32,25 @@ a5paper%                       Taille de page.
 %\addtolength{\voffset}{2mm}\addtolength{\headsep}{-2mm}
 %\setlength{\extrarowheight}{2mm}
 
-\addto\captionsfrench{%
-  \renewcommand{\indexname}{Index des chants}%
-}
 
-\pdfcompresslevel=9
+%\pdfcompresslevel=9
 
-\newcommand{\lieu}[1]{\hfill\linebreak[3]\hspace*{\stretch{1}}\nolinebreak\mbox{\emph{(#1)}}}
-
-\newcommand{\commandement}[1]{\noindent\textbf{#1}}
-
-\newcommand{\schola}[1]{}\newcommand{\foule}[1]{#1}
-\providecommand{\dest}{foule}
-
-\newcommand{\bgimage}[1]{%
-\raisebox{-.45\paperheight}[0pt][0pt]{%
-  \transparent{0.3}%
-  \includegraphics[width=.7\paperwidth,height=.7\paperheight,keepaspectratio=true]{img/#1}%
-  }%
-}
-
-\def\arraystretch{1.2}
+\def\arraystretch{1.2} %????
 
 \newcommand{\reponsegras}[2]{
 \versio{\textbf{#1}}{\textbf{#2}}
 }
 
-\title{Angélus et Regina Cæli}
-\date{}
+%\let\oldaddchap\addchap
+%\def\addchap#1{\oldaddchap{#1}\markright{Pèlerinage du Christ-Roi}}
 
-\let\oldaddchap\addchap
-\def\addchap#1{\oldaddchap{#1}\markright{Pèlerinage du Christ-Roi}}
-
-\def\blindsection#1{\markright{#1}\addcontentsline{toc}{section}{#1}}
+%\def\blindsection#1{\markright{#1}\addcontentsline{toc}{section}{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%% Début du document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\chapter{Angelus}
+\title{Angelus}
 
 \reponsegras{\vb.\ Angelus Dómini nuntiávit Maríæ,}{\vb.~L'ange du Seigneur fit l'annonce à Marie,}
 \versio{\rb.\ Et concépit de Spíritu Sancto.}{\rb.\ Et elle a conçu du Saint-Esprit.}
